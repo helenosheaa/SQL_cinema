@@ -75,6 +75,6 @@ INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 20
 
 -- SELECT title  FROM movies;
 
-UPDATE movies SET show_time = '21:25' WHERE title = 'Guardians of the Galaxy 2';
-
-SELECT * FROM movies;
+-- UPDATE movies SET show_time = '21:25' WHERE title = 'Guardians of the Galaxy 2';
+--
+-- SELECT * FROM movies;

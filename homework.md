@@ -23,6 +23,7 @@ Use the supplied data as the source of data to answer the questions. Copy the SQ
 ## Questions
 
 1.  Return ALL the data in the 'movies' table.
+
 SELECT * FROM movies;
 
 id |                title                | year | show_time
@@ -50,6 +51,10 @@ id |                title                | year | show_time
 
 2.  Return ONLY the name column from the 'people' table
 name            
+
+SELECT name FROM people;
+
+name            
 ---------------------------
 Shaun   Adams
 James   Amos
@@ -75,6 +80,9 @@ Daniel  Warren
 (21 rows)
 
 3.  Oops! Someone at CodeClan spelled Jesus's name wrong! Change it to reflect the proper spelling ('Jezuz Perez' should be 'Jesus Perez').
+
+UPDATE people SET name = 'Jesus	Perez' WHERE name = 'Jezuz	Perez';
+
 name            
 ---------------------------
 Shaun   Adams
@@ -99,8 +107,6 @@ Can     Toraman
 Daniel  Warren
 Jesus   Perez
 (21 rows)
-
-UPDATE people SET name = 'Jesus	Perez' WHERE name = 'Jezuz	Perez';
 
 
 4.  Return ONLY your name from the 'people' table.
@@ -195,9 +201,8 @@ Daniel  Warren
 John Harper
 (21 rows)
 
-
-
 8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
+
 INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 2018, '00:00');
 
 Iron Man
@@ -222,8 +227,8 @@ Black Panther
 Avengers: Infinity War
 (20 rows)
 
-
 9.  The cinema would also like to make the Guardians movies a back to back feature. Find out the show time of "Guardians of the Galaxy" and set the show time of "Guardians of the Galaxy 2" to start two hours later.
+
 UPDATE movies SET show_time = '21:25' WHERE title = 'Guardians of the Galaxy 2';
 
 ----+-------------------------------------+------+-----------
